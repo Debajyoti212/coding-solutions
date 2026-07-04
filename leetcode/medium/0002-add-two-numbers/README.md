@@ -48,22 +48,31 @@ Output: [8,9,9,9,0,0,0,1]
 **Language:** Python  
 **Runtime:** 0 ms  
 **Memory:** 12.4 MB  
-**Submitted:** 2026-07-04T13:03:21.939Z  
+**Submitted:** 2026-07-04T13:05:39.685Z  
 
 ```py
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution(object):
+class Solution:
     def addTwoNumbers(self, l1, l2):
-        """
-        :type l1: Optional[ListNode]
-        :type l2: Optional[ListNode]
-        :rtype: Optional[ListNode]
-        """
-        
+        dummy = ListNode(0)
+        current = dummy
+        carry = 0
+
+        while l1 or l2 or carry:
+            x = l1.val if l1 else 0
+            y = l2.val if l2 else 0
+
+            total = x + y + carry
+            carry = total // 10
+
+            current.next = ListNode(total % 10)
+            current = current.next
+
+            if l1:
+                l1 = l1.next
+            if l2:
+                l2 = l2.next
+
+        return dummy.next
 ```
 
 ---
