@@ -42,9 +42,9 @@ Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.4 MB  
-**Submitted:** 2026-07-07T14:34:39.403Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 19.7 MB (beats 14.52%)  
+**Submitted:** 2026-07-07T14:34:46.560Z  
 
 ```py
 class Solution:
